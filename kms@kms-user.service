@@ -1,0 +1,12 @@
+[Unit]
+Description=KMS
+After=network-online.target
+
+[Service]
+Type=forking
+WorkingDirectory=/home/kms-user/vlmcsd/bin
+User=kms-user
+ExecStart=/home/kms-user/vlmcsd/bin/vlmcsd
+
+[Install]
+WantedBy=multi-user.target
